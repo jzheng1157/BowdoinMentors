@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+    <style>
+    </style>
+
+</head>
+
+<body style="background-image: url('https://www.bowdoin.edu/images/virtual-tour.jpg'); background-size: cover;">
+    
+    <main class="container">
+
+        <article style="width: 70%;
+        text-align: center;
+        margin: 0 auto;
+        ">
+
+            <h1>Bowdoin Mentors</h1>
+            <form>
+                <input type="text" name="login" placeholder="Login" aria-label="Login" autocomplete="nickname" required>
+                <input type="password" name="password" placeholder="Password" aria-label="Password"
+                    autocomplete="current-password" required>
+                <fieldset>
+                    <div class="grid">
+                        <label for="remember">
+                            <input type="checkbox" role="switch" id="remember" name="remember">
+                            Remember me
+                        </label>
+                        <a>Forgot Password?</a>
+                        <a>Sign up</a>
+                    </div>
+
+
+                </fieldset>
+                
+                <button type="submit" class="contrast" onclick="window.location.href='/studentview.html';">Login</button>
+            </form>
+
+        </article>
+    </main>
+
+</body>
+
+</html>
