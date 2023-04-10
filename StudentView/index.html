@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap grid system example • Pico.css</title>
+    <meta name="description" content="Custom CSS build with the Bootstrap grid system to manage complex grid layouts in Pico.">
+    <link rel="shortcut icon" href="https://picocss.com/favicon.ico">
+    <link rel="canonical" href="https://picocss.com/examples/bootstrap-grid/">
+
+     <!-- Pico.css custom build with Bootstrap grid -->
+    <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom Styles for this example -->
+    <style>
+    .row-example {
+      margin-top: calc(var(--typography-spacing-vertical) * 2);
+      margin-bottom: calc(var(--typography-spacing-vertical) * 2);
+    }
+    .mentor-rows {
+      margin-bottom: 10px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      background: var(--secondary);
+      color: var(--secondary-inverse);
+      text-align: center;
+    }
+
+    .title {
+      padding-top: 0px;
+      display: block;
+      color: white;
+      font-size: 2rem;
+      padding-left: 15px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #38444d;
+      list-style: none;
+      z-index: -1;
+    }
+
+    li {
+      float: left;
+      list-style: none;  
+      z-index: 9998;
+    }
+
+    li a, .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      list-style: none;  
+      text-align: justify;
+    }
+
+    li a:hover, .dropdown:hover .dropbtn {
+      background-color: rgba(255, 255, 255, 0.218);
+      list-style: none;  
+
+    }
+
+    li.dropdown {
+      display: inline-block;
+      list-style: none;  
+
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    li.search-container {
+      
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 12px 16px;
+      text-decoration: none;
+      list-style: none;  
+      text-align: justify;    
+    }
+
+    li.search-container button {
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: #ddd;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+      content: "\f002";
+    }
+
+    li.search-container button:hover {
+      background: #ccc;
+    }
+
+    li.search-container.form {
+      padding: 0px 0px;
+      background-color: white;
+      position:absolute;
+    }
+    
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li>
+        <div class="title">
+          Bowdoin Mentors
+        </div>
+      </li>
+      <li class="dropdown" style="float:right;">
+        <a href="javascript:void(0)" class="dropbtn">[First] [Last] &or;</a>
+        <div class="dropdown-content">
+          <a href="#">Account</a>
+          <a href="#">Options</a>
+          <a href="#">Sign Out</a>
+        </div>
+      </li>
+
+    </ul>
+
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li class="search-container">  
+
+        <form action="/action_page.php">
+          <input type="text" placeholder="Name.." name="search" style="height:30px;color:white;">
+        </form>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Class &or;</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Location &or;</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Major &or;</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Advanced &or;</a>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </li>
+      <li><a href="#reset">Reset Filters</a></li>
+
+    </ul>
+      
+    
+    <!-- <li>
+      <details role="list">
+        <summary aria-haspopup="listbox" role="button" class="secondary">Theme</summary>
+        <ul role="listbox">
+          <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+          <li><a href="#" data-theme-switcher="light">Light</a></li>
+          <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <details role="list">
+        <summary aria-haspopup="listbox" role="button" class="secondary">Class</summary>
+        <ul role="listbox">
+          <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+          <li><a href="#" data-theme-switcher="light">Light</a></li>
+          <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+        </ul>
+      </details>
+    </li>
+     -->
+    
+    
+    <!-- Header -->
+    <header class="container">
+      
+      <hgroup>
+        <h1>Pico + Bootstrap grid system</h1>
+        <h2>Custom CSS build with the <a href="https://getbootstrap.com/docs/5.2/layout/grid/">Bootstrap grid system</a> to manage complex grid layouts in <a href="https://github.com/picocss/pico">Pico</a></h2>
+      </hgroup>
+      <nav>
+        <ul>
+          <li>
+            <details role="list">
+              <summary aria-haspopup="listbox" role="button" class="secondary">Theme</summary>
+              <ul role="listbox">
+                <li><a href="#" data-theme-switcher="auto">Auto</a></li>
+                <li><a href="#" data-theme-switcher="light">Light</a></li>
+                <li><a href="#" data-theme-switcher="dark">Dark</a></li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <details role="list">
+              <summary aria-haspopup="listbox">Examples</summary>
+              <ul role="listbox">
+                <li><a href="../preview/">Preview</a></li>
+                <li><a href="../preview-rtl/">Right-to-left</a></li>
+                <li><a href="../classless/">Class-less</a></li>
+                <li><a href="../basic-template/">Basic template</a></li>
+                <li><a href="../company/">Company</a></li>
+                <li><a href="../google-amp/">Google Amp</a></li>
+                <li><a href="../sign-in/">Sign in</a></li>
+                <li><a href="../bootstrap-grid/">Bootstrap grid</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </header><!-- ./ Header -->
+
+    <!-- Main -->
+    <main class="container">
+      <p>For this example, we have merged and compiled Pico design system with the Bootstrap grid system (<a href="https://github.com/picocss/examples/blob/master/bootstrap-grid/scss/pico-bootstrap-grid.scss">Source code here</a>).</p>
+      <p>
+        This allows to use the powerful Boostrap grid system to build layouts with:
+        <a href="https://getbootstrap.com/docs/5.2/layout/grid/#auto-layout-columns">Auto-columns</a>,
+        <a href="https://getbootstrap.com/docs/5.2/layout/grid/#responsive-classes">Responsive classes</a>,
+        <a href="https://getbootstrap.com/docs/5.2/layout/columns/#alignment">Alignment</a>,
+        <a href="https://getbootstrap.com/docs/5.2/layout/columns/#reordering">Reordering</a> and
+        <a href="https://getbootstrap.com/docs/5.2/layout/grid/#nesting">Nesting</a>.
+      </p>
+
+      <!-- Grid Bootstrap -->
+      <h1>These grids could be used for the mentor cards maybe?</h1>
+      <div class="row">
+        <div class="mentor-rows">Mentor Card 1</div>
+        <div class="mentor-rows">Mentor Card 2</div>
+
+      </div>
+
+      <div class="row row-example">
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">1</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">2</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">3</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">4</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">5</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">6</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">7</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">8</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">9</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">10</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">11</div>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+          <div class="col-example">12</div>
+        </div>
+      </div><!-- ./ Grid Bootstrap -->
+
+      <p>This grid example displays:</p>
+      <ul>
+        <li>1 column on <strong>extra small</strong> devices <code>&lt;576px</code></li>
+        <li>2 columns on <strong>small</strong> devices <code>≥576px</code></li>
+        <li>3 columns on <strong>medium</strong> devices <code>≥768px</code></li>
+        <li>4 columns on <strong>large</strong> devices <code>≥992px</code></li>
+        <li>6 columns on <strong>extra large</strong> devices <code>≥1200px</code></li>
+      </ul>
+    </main><!-- ./ Main -->
+
+    <!-- Footer -->
+    <footer class="container">
+      <small>Built with <a href="https://picocss.com">Pico</a> • <a href="https://github.com/picocss/examples/blob/master/bootstrap-grid/">Source code</a></small>
+    </footer><!-- ./ Footer -->
+
+    <!-- Minimal theme switcher -->
+    <script src="../js/minimal-theme-switcher.js"></script>
+
+  </body>
+
+</html>
