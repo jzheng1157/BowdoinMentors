@@ -675,7 +675,7 @@ ul {
     font-style: normal;
     font-weight: var(--font-weight);
     font-size: var(--font-size);
-    z-index: -1;
+    z-index: 0;
 }
 
 [role=link],
@@ -2846,7 +2846,8 @@ textarea {
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
-    margin-top: var(--bs-gutter-y)
+    margin-top: var(--bs-gutter-y);
+    margin-bottom: 10px;
 }
 
 .col {

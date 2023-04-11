@@ -1,24 +1,26 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap grid system example • Pico.css</title>
-    <meta name="description" content="Custom CSS build with the Bootstrap grid system to manage complex grid layouts in Pico.">
-    <link rel="shortcut icon" href="https://picocss.com/favicon.ico">
-    <link rel="canonical" href="https://picocss.com/examples/bootstrap-grid/">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap grid system example • Pico.css</title>
+  <meta name="description"
+    content="Custom CSS build with the Bootstrap grid system to manage complex grid layouts in Pico.">
+  <link rel="shortcut icon" href="https://picocss.com/favicon.ico">
+  <link rel="canonical" href="https://picocss.com/examples/bootstrap-grid/">
 
-     <!-- Pico.css custom build with Bootstrap grid -->
-    <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Custom Styles for this example -->
-    <style>
+  <!-- Pico.css custom build with Bootstrap grid -->
+  <link rel="stylesheet" href="css/pico-bootstrap-grid.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Custom Styles for this example -->
+  <style>
     .row-example {
       margin-top: calc(var(--typography-spacing-vertical) * 2);
       margin-bottom: calc(var(--typography-spacing-vertical) * 2);
     }
+
     .mentor-rows {
       margin-bottom: 10px;
       padding-top: 50px;
@@ -48,29 +50,31 @@
 
     li {
       float: left;
-      list-style: none;  
+      list-style: none;
       z-index: 9998;
     }
 
-    li a, .dropbtn {
+    li a,
+    .dropbtn {
       display: inline-block;
       color: white;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
-      list-style: none;  
+      list-style: none;
       text-align: justify;
     }
 
-    li a:hover, .dropdown:hover .dropbtn {
+    li a:hover,
+    .dropdown:hover .dropbtn {
       background-color: rgba(255, 255, 255, 0.218);
-      list-style: none;  
+      list-style: none;
 
     }
 
     li.dropdown {
       display: inline-block;
-      list-style: none;  
+      list-style: none;
 
     }
 
@@ -79,7 +83,7 @@
       position: absolute;
       background-color: #f9f9f9;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
     }
 
@@ -91,21 +95,23 @@
       text-align: left;
     }
 
-    .dropdown-content a:hover {background-color: #f1f1f1;}
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
 
     .dropdown:hover .dropdown-content {
       display: block;
     }
 
     li.search-container {
-      
+
       display: inline-block;
       color: white;
       text-align: center;
       padding: 12px 16px;
       text-decoration: none;
-      list-style: none;  
-      text-align: justify;    
+      list-style: none;
+      text-align: justify;
     }
 
     li.search-container button {
@@ -126,100 +132,86 @@
     li.search-container.form {
       padding: 0px 0px;
       background-color: white;
-      position:absolute;
+      position: absolute;
     }
-    
-    </style>
-  </head>
 
-  <body>
-    <ul>
-      <li>
-        <div class="title">
-          Bowdoin Mentors
-        </div>
-      </li>
-      <li class="dropdown" style="float:right;">
-        <a href="javascript:void(0)" class="dropbtn">[First] [Last] &or;</a>
-        <div class="dropdown-content">
-          <a href="#">Account</a>
-          <a href="#">Options</a>
-          <a href="#">Sign Out</a>
-        </div>
-      </li>
+    .name {
+      float: left;
+      display: block;
+      color: white;
+      font-size: 2rem;
+      padding-left: 15px;
+    }
+  </style>
+</head>
 
-    </ul>
-
-    <ul>
-      <li><a class="active" href="#home">Home</a></li>
-      <li class="search-container">  
-
-        <form action="/action_page.php">
-          <input type="text" placeholder="Name.." name="search" style="height:30px;color:white;">
-        </form>
-      </li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Class &or;</a>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Location &or;</a>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Major &or;</a>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </li>
-      <li class="dropdown">
-        <a href="javascript:void(0)" class="dropbtn">Advanced &or;</a>
-        <div class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </li>
-      <li><a href="#reset">Reset Filters</a></li>
-
-    </ul>
-      
-    
-    <!-- <li>
-      <details role="list">
-        <summary aria-haspopup="listbox" role="button" class="secondary">Theme</summary>
-        <ul role="listbox">
-          <li><a href="#" data-theme-switcher="auto">Auto</a></li>
-          <li><a href="#" data-theme-switcher="light">Light</a></li>
-          <li><a href="#" data-theme-switcher="dark">Dark</a></li>
-        </ul>
-      </details>
-    </li>
+<body>
+  <ul>
     <li>
-      <details role="list">
-        <summary aria-haspopup="listbox" role="button" class="secondary">Class</summary>
-        <ul role="listbox">
-          <li><a href="#" data-theme-switcher="auto">Auto</a></li>
-          <li><a href="#" data-theme-switcher="light">Light</a></li>
-          <li><a href="#" data-theme-switcher="dark">Dark</a></li>
-        </ul>
-      </details>
+      <div class="title">
+        Bowdoin Mentors
+      </div>
     </li>
-     -->
-    
-    
-    <!-- Header -->
-    <header class="container">
+    <li class="dropdown" style="float:right;">
+      <a href="javascript:void(0)" class="dropbtn">[First] [Last] &or;</a>
+      <div class="dropdown-content">
+        <a href="#">Account</a>
+        <a href="#">Options</a>
+        <a href="#">Sign Out</a>
+      </div>
+    </li>
+
+  </ul>
+
+  <ul>
+    <li><a class="active" href="#home">Home</a></li>
+    <li class="search-container">
+
+      <form action="/action_page.php">
+        <input type="text" placeholder="Name.." name="search" style="height:30px;color:white;">
+      </form>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Class &or;</a>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Location &or;</a>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Major &or;</a>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Advanced &or;</a>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </li>
+    <li><a href="#reset">Reset Filters</a></li>
+
+  </ul>
+
+
+
+
+  <!-- Header -->
+  <!-- <header class="container">
       
       <hgroup>
         <h1>Pico + Bootstrap grid system</h1>
@@ -254,85 +246,223 @@
           </li>
         </ul>
       </nav>
-    </header><!-- ./ Header -->
+    </header> -->
 
-    <!-- Main -->
-    <main class="container">
-      <p>For this example, we have merged and compiled Pico design system with the Bootstrap grid system (<a href="https://github.com/picocss/examples/blob/master/bootstrap-grid/scss/pico-bootstrap-grid.scss">Source code here</a>).</p>
-      <p>
-        This allows to use the powerful Boostrap grid system to build layouts with:
-        <a href="https://getbootstrap.com/docs/5.2/layout/grid/#auto-layout-columns">Auto-columns</a>,
-        <a href="https://getbootstrap.com/docs/5.2/layout/grid/#responsive-classes">Responsive classes</a>,
-        <a href="https://getbootstrap.com/docs/5.2/layout/columns/#alignment">Alignment</a>,
-        <a href="https://getbootstrap.com/docs/5.2/layout/columns/#reordering">Reordering</a> and
-        <a href="https://getbootstrap.com/docs/5.2/layout/grid/#nesting">Nesting</a>.
-      </p>
+  <!-- Main -->
+  <main class="container">
+    <!-- Grid Bootstrap -->
+    <div class="row">
+      <div class="card" style="width: 720rem;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <h5 class="card-title">Ian Matheson (2024)</h5>
+            </div>
+            <div class="col">
+              <b>Location:</b> San Francisco, CA
+            </div>
+            <div class="col">
+              <b>Major:</b> Computer Science
+            </div>
+          </div>
 
-      <!-- Grid Bootstrap -->
-      <h1>These grids could be used for the mentor cards maybe?</h1>
-      <div class="row">
-        <div class="mentor-rows">Mentor Card 1</div>
-        <div class="mentor-rows">Mentor Card 2</div>
-
+          <p class="card-text">
+            <div class="row">
+              <div class="col">
+                <b>Company:</b> Google
+              </div>
+              <div class="col">
+                <b>Field:</b> Tech
+              </div>
+              <div class="col">
+                <b>Email:</b> imatheson@bowdoin.edu
+              </div>
+            </div>
+          </p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#mentor1"
+            aria-expanded="false" aria-controls="collapseExample">
+            &or;
+          </button>
+        </div>
+        <div class="collapse" id="mentor1">
+          <div class="card card-body">
+            <div class="row">
+              <div class="col-9">
+                <h6><b>Bio:</b> This is my bio!</h6>
+              </div>
+              <div class="col">
+                <a href="#mentor-request" class="btn btn-primary" role="button">Request Mentoring</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" style="margin-bottom: 1.5rem">
+                <b>Activities:</b> Track and Field, Cross Country, League of Legends
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col">
+                <b>Fraternity/Social House:</b> Howell
+              </div>
+              <div class="col">
+                <b>Phone Number:</b> 123-456-7890
+              </div>
+              <div class="col">
+                <b>Social Media:</b> @IanMatheson
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="row row-example">
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">1</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">2</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">3</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">4</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">5</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">6</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">7</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">8</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">9</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">10</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">11</div>
-        </div>
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-          <div class="col-example">12</div>
-        </div>
-      </div><!-- ./ Grid Bootstrap -->
+      <div class="card" style="width: 720rem;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <h5 class="card-title">Alan Casey (2024)</h5>
+            </div>
+            <div class="col">
+              <b>Location:</b> Seattle, WA
+            </div>
+            <div class="col">
+              <b>Major:</b> Computer Science
+            </div>
+          </div>
 
-      <p>This grid example displays:</p>
-      <ul>
-        <li>1 column on <strong>extra small</strong> devices <code>&lt;576px</code></li>
-        <li>2 columns on <strong>small</strong> devices <code>≥576px</code></li>
-        <li>3 columns on <strong>medium</strong> devices <code>≥768px</code></li>
-        <li>4 columns on <strong>large</strong> devices <code>≥992px</code></li>
-        <li>6 columns on <strong>extra large</strong> devices <code>≥1200px</code></li>
-      </ul>
-    </main><!-- ./ Main -->
+          <p class="card-text">
+            <div class="row">
+              <div class="col">
+                <b>Company:</b> Amazon
+              </div>
+              <div class="col">
+                <b>Field:</b> Tech
+              </div>
+              <div class="col">
+                <b>Email:</b> acasey@bowdoin.edu
+              </div>
+            </div>
+          </p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#mentor2"
+            aria-expanded="false" aria-controls="collapseExample">
+            &or;
+          </button>
+        </div>
+        <div class="collapse" id="mentor2">
+          <div class="card card-body">
+            <div class="row">
+              <div class="col-9">
+                <h6><b>Bio:</b> This is my bio!</h6>
+              </div>
+              <div class="col">
+                <a href="#mentor-request" class="btn btn-primary" role="button">Request Mentoring</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" style="margin-bottom: 1.5rem">
+                <b>Activities:</b> Soccer, Climbing
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col">
+                <b>Fraternity/Social House:</b>
+              </div>
+              <div class="col">
+                <b>Phone Number:</b> 123-456-7890
+              </div>
+              <div class="col">
+                <b>Social Media:</b> @ACasey
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Footer -->
-    <footer class="container">
-      <small>Built with <a href="https://picocss.com">Pico</a> • <a href="https://github.com/picocss/examples/blob/master/bootstrap-grid/">Source code</a></small>
-    </footer><!-- ./ Footer -->
+      <div class="card" style="width: 720rem;">
+        <div class="card-body">
+          <div class="row">
+            <div class="col">
+              <h5 class="card-title">William Warlick (2024)</h5>
+            </div>
+            <div class="col">
+              <b>Location:</b> New York, New York
+            </div>
+            <div class="col">
+              <b>Major:</b> Computer Science
+            </div>
+          </div>
 
-    <!-- Minimal theme switcher -->
-    <script src="../js/minimal-theme-switcher.js"></script>
+          <p class="card-text">
+            <div class="row">
+              <div class="col">
+                <b>Company:</b> Microsoft
+              </div>
+              <div class="col">
+                <b>Field:</b> Tech
+              </div>
+              <div class="col">
+                <b>Email:</b> wwarlick@bowdoin.edu
+              </div>
+            </div>
+          </p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            &or;
+          </button>
+        </div>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <div class="row">
+              <div class="col-9">
+                <h6><b>Bio:</b> This is my bio!</h6>
+              </div>
+              <div class="col">
+                <a href="#mentor-request" class="btn btn-primary" role="button">Request Mentoring</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col" style="margin-bottom: 1.5rem">
+                <b>Activities:</b> Track and Field, Cross Country, Climbing
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col">
+                <b>Fraternity/Social House:</b>
+              </div>
+              <div class="col">
+                <b>Phone Number:</b> 123-456-7890
+              </div>
+              <div class="col">
+                <b>Social Media:</b> @William
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  </body>
+    </div>
+      
+  </main><!-- ./ Main -->
+
+  <!-- Footer -->
+  <footer class="container">
+    <small>Built with <a href="https://picocss.com">Pico</a> • <a
+        href="https://github.com/picocss/examples/blob/master/bootstrap-grid/">Source code</a></small>
+  </footer><!-- ./ Footer -->
+
+  <!-- Minimal theme switcher -->
+  <script src="../js/minimal-theme-switcher.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
 
 </html>
