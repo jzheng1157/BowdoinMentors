@@ -10,6 +10,18 @@
 
     </style>
 
+<script>
+    function navigateToPage() {
+      const mentorRadioButton = document.getElementById('mentor');
+      const menteeRadioButton = document.getElementById('mentee');
+
+      if (mentorRadioButton.checked) {
+        window.location.href = './mentorview.html';
+      } else if (menteeRadioButton.checked) {
+        window.location.href = './Studentview/index.html';
+      }
+    }
+  </script>
 </head>
 
 <!-- url('https://www.bowdoin.edu/images/virtual-tour.jpg')-->
@@ -43,11 +55,11 @@
                 
             </div>
       
-            <button type="submit" class="contrast" onclick="window.location.href='./StudentView/index.html';">Register</button>
+            <button type="button" class="contrast" onclick="navigateToPage();">Register</button>
         </article>
 
     </main>
 
-</body>
+</body>l
 
 </html>
