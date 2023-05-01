@@ -18,13 +18,17 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <!-- Custom Styles for this example -->
+  <script>
+    function mentorClick() {
+        alert("Your mentor has been notified!");
+    }
+      </script>
   <style>
 
   </style>
 </head>
 
 <body>
-
 
   <nav class="navbar navbar-expand-lg bg-dark" style="color: black;">
     <h1>Bowdoin Mentors</h1>
@@ -37,7 +41,7 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="../about.html">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../mentorview.html">Mentors</a>
@@ -93,7 +97,7 @@
                 <h6><b>Bio:</b> This is my bio!</h6>
               </div>
               <div class="col">
-                <a href="#mentor-request" class="btn btn-primary" role="button">Request Mentoring</a>
+                <a class="btn btn-primary" onclick="mentorClick()" type="button">Request Mentoring</a>
               </div>
             </div>
             <div class="row">
@@ -156,7 +160,7 @@
                 <h6><b>Bio:</b> This is my bio!</h6>
               </div>
               <div class="col">
-                <a href="#mentor-request" class="btn btn-primary" role="button">Request Mentoring</a>
+                <a class="btn btn-primary" onclick="mentorClick()" type="button">Request Mentoring</a>
               </div>
             </div>
             <div class="row">
@@ -219,7 +223,7 @@
                 <h6><b>Bio:</b> This is my bio!</h6>
               </div>
               <div class="col">
-                <a href="#mentor-request" class="btn btn-primary" role="button">Request Mentoring</a>
+                <a class="btn btn-primary" onclick="mentorClick()" type="button">Request Mentoring</a>
               </div>
             </div>
             <div class="row">
