@@ -21,6 +21,10 @@
         window.location.href = './Studentview/index.html';
       }
     }
+
+    function closeSingleSelectDropdown() {
+  document.getElementById('single-select-dropdown').removeAttribute('open');
+}
   </script>
 </head>
 
@@ -41,15 +45,31 @@
 
             <div class="grid">
                 <fieldset>
-                    <legend>I am a...</legend>
-                    <label for="mentor">
-                      <input type="radio" id="mentor" name="size"  checked>
-                      Mentor
-                    </label>
-                    <label for="mentee">
-                      <input type="radio" id="mentee" name="size" >
-                      Mentee
-                    </label>
+                  <details role="listbox" id="single-select-dropdown">
+                    <summary aria-haspopup="listbox">Single select</summary>
+                    <ul role="listbox">
+                      <li>
+                        <input
+                          type="radio"
+                          id="mentee"
+                          name="Mentee"
+                          onchange="closeSingleSelectDropdown()"
+                        />
+                        <label for="mentee">Mentee</label>
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          id="mentee"
+                          name="Mentor"
+                          onchange="closeSingleSelectDropdown()"
+                        />
+                        <label for="mentor">Mentor</label>
+                      </li>
+                    </ul>
+                  </details>
+
+                    
                   
                   </fieldset>
                 
