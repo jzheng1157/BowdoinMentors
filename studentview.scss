@@ -1,0 +1,9 @@
+/* Custom Blue-grey version */
+
+// Override default variables
+$primary-500: #a7dbf6;
+$primary-600: #9ad7f4;
+$primary-700: #0889c4;
+
+// Import Pico
+@import "@picocss/pico/scss/pico";

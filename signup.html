@@ -12,6 +12,20 @@
 
   <script src="main.js"></script>
 
+<<<<<<< HEAD
+=======
+      if (mentorRadioButton.checked) {
+        window.location.href = './mentorview.html';
+      } else if (menteeRadioButton.checked) {
+        window.location.href = './Studentview/index.html';
+      }
+    }
+
+    function closeSingleSelectDropdown() {
+  document.getElementById('single-select-dropdown').removeAttribute('open');
+}
+  </script>
+>>>>>>> d935df44ee090f5e82ecff3afa2894d7acc43580
 </head>
 
 <!-- url('https://www.bowdoin.edu/images/virtual-tour.jpg')-->
@@ -22,8 +36,9 @@
         <article style="width: 64%; text-align: center; margin: 0 auto;" id="signup">
             <img style="width: 100px; border-radius: 50%;"
                 src="http://cdn.shopify.com/s/files/1/0064/8212/products/dcl003-bowdoin_800x.jpeg?v=1571438488">
-            <h1>Log In</h1>
+            <h1>Sign Up</h1>
 
+<<<<<<< HEAD
             <input type="text" placeholder="Your name" name="name" id="name" required>
             <input type="text" placeholder="Your Email" name="email" id="email" required>
 
@@ -41,6 +56,40 @@
                       <input type="radio" id="mentee" name="size" >
                       Mentee
                     </label>
+=======
+            <input placeholder="Your Full Name">
+            <input placeholder="Your Email">
+            <input placeholder="Password">
+            <input placeholder="Retype Your Password">
+
+            <div class="grid">
+                <fieldset>
+                  <details role="listbox" id="single-select-dropdown">
+                    <summary aria-haspopup="listbox">Single select</summary>
+                    <ul role="listbox">
+                      <li>
+                        <input
+                          type="radio"
+                          id="mentee"
+                          name="Mentee"
+                          onchange="closeSingleSelectDropdown()"
+                        />
+                        <label for="mentee">Mentee</label>
+                      </li>
+                      <li>
+                        <input
+                          type="radio"
+                          id="mentee"
+                          name="Mentor"
+                          onchange="closeSingleSelectDropdown()"
+                        />
+                        <label for="mentor">Mentor</label>
+                      </li>
+                    </ul>
+                  </details>
+
+                    
+>>>>>>> d935df44ee090f5e82ecff3afa2894d7acc43580
                   
                   </fieldset>
                 
