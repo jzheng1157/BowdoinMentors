@@ -10,11 +10,10 @@
 
     </style>
 
-<script>
-    function navigateToPage() {
-      const mentorRadioButton = document.getElementById('mentor');
-      const menteeRadioButton = document.getElementById('mentee');
+  <script src="main.js"></script>
 
+<<<<<<< HEAD
+=======
       if (mentorRadioButton.checked) {
         window.location.href = './mentorview.html';
       } else if (menteeRadioButton.checked) {
@@ -26,18 +25,38 @@
   document.getElementById('single-select-dropdown').removeAttribute('open');
 }
   </script>
+>>>>>>> d935df44ee090f5e82ecff3afa2894d7acc43580
 </head>
 
 <!-- url('https://www.bowdoin.edu/images/virtual-tour.jpg')-->
 
-<body style="background-image: url('Spring2019-051.jpg'); background-size: cover; ">
+<body style="background-image: url('images/Spring2019-051.jpg'); background-size: cover; ">
     <main class="container">
 
-        <article style="width: 64%; text-align: center; margin: 0 auto; margin-top: ;" id="signup">
+        <article style="width: 64%; text-align: center; margin: 0 auto;" id="signup">
             <img style="width: 100px; border-radius: 50%;"
                 src="http://cdn.shopify.com/s/files/1/0064/8212/products/dcl003-bowdoin_800x.jpeg?v=1571438488">
             <h1>Sign Up</h1>
 
+<<<<<<< HEAD
+            <input type="text" placeholder="Your name" name="name" id="name" required>
+            <input type="text" placeholder="Your Email" name="email" id="email" required>
+
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+
+            <div class="grid">
+                <fieldset>
+                    <legend>I am a...</legend>
+                    <label for="mentor">
+                      <input type="radio" id="mentor" name="size" checked>
+                      Mentor
+                    </label>
+                    <label for="mentee">
+                      <input type="radio" id="mentee" name="size" >
+                      Mentee
+                    </label>
+=======
             <input placeholder="Your Full Name">
             <input placeholder="Your Email">
             <input placeholder="Password">
@@ -70,16 +89,17 @@
                   </details>
 
                     
+>>>>>>> d935df44ee090f5e82ecff3afa2894d7acc43580
                   
                   </fieldset>
                 
             </div>
       
-            <button type="button" class="contrast" onclick="navigateToPage();">Register</button>
+            <button type="button" class="contrast" onclick="registration();">Register</button>
         </article>
 
     </main>
 
-</body>l
+</body>
 
 </html>
