@@ -90,3 +90,25 @@ function checkLogin() {
         alert("Incorrect email or password.");
     }
 }
+
+/**
+ * Retrieves user's password based on provided email.
+ */
+function getPassword() {
+    users = JSON.parse(localStorage.getItem('Users'));
+
+    let emailInput = document.getElementById("lostEmail").value;
+    let retrievedPass;
+
+    const foundPass = this.users.find( (user) => {
+        retrievedPass = user.Password;
+        return user.Email === emailInput;
+    });
+
+    if (foundPass) {
+        alert("Your password is: " + retrievedPass);
+    }
+    else {
+        alert("Email not found.");
+    }
+}
