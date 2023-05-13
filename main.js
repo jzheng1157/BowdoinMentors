@@ -11,7 +11,7 @@ function navigateToPage(userType) {
             window.location.href = './mentorview.html';
             break;
         case "Mentee":
-            window.location.href = './Studentview/index.html';
+            window.location.href = './studentview.html';
             break;
     }
 }
@@ -55,7 +55,7 @@ function registration() {
             localStorage.setItem('Users', JSON.stringify(users));
 
             alert("Success! User account created.");
-            window.location = './index.html';
+            window.location = './studentview.html';
         }
         else {
             alert("Passwords do not match! Please try again.");
