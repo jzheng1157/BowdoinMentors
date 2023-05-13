@@ -77,18 +77,25 @@ function checkLogin() {
     let emailInput = document.getElementById("login").value;
     let passInput = document.getElementById("password").value;
     let userType;
+    let curUser;
 
     const fieldsMatch = this.users.find( (user) => {
         userType = user.UserType;
+        curUser = user;
         return user.Email === emailInput && user.Password === passInput;
         });
 
     if (fieldsMatch) {
+        setCurrentUser(curUser);
         navigateToPage(userType);
     }
     else {
         alert("Incorrect email or password.");
     }
+}
+
+function setCurrentUser(user) {
+    localStorage.setItem("CurrentUser", JSON.stringify(user));
 }
 
 /**
