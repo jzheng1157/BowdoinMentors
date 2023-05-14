@@ -12,7 +12,7 @@
 
 </head>
 
-<body style="background-color: #1d3b47be;"> 
+<body style="background-color: #1d3b47be;" onload="getCurrentUser()"> 
     <nav style="background-color: #141e26; font-size: 1000px">
         <ul style="margin-left: 7px;">
             <li style=" font-size: 40px; color: white;">
@@ -45,16 +45,12 @@
                 
                 </div>
                 
-                <br>
-
-                <p><b>Activities:</b> Orchestra, Chamber Group, Outing Club, College House</p> 
-                
                 <!-- Input boxes -->
                 <div class="grid" style="margin: 0 50px;">
     
                     <label for="firstname">
                     First name
-                    <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+                    <input type="text" id="usersName" name="firstname" placeholder="First name" required>
                     </label>
                 
                     <label for="lastname">
@@ -91,6 +87,15 @@
                     </label>
                 
                 </div>
+
+                <div class="grid" style="margin: 0 50px;">
+                
+                    <label for="activities">
+                    Activities
+                    <input type="text" id="activities" name="activities" placeholder="Write your activities here" required>
+                    </label>
+                
+                </div>
             
                 <div class="grid" style="margin: 0 50px;">
                 
@@ -115,26 +120,22 @@
                     </label>
                 
                 </div>
-
+                <div >
+                    <!-- Submit Button -->
+                    <button type="submit">Submit</button>
+            
+                </div>
             </article>
 
         </main>
 
     </div>
 
-    <div >
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
 
-    </div>
 
     <script>
         window.onload = function() {
             document.getElementById('usersName').innerText = JSON.parse(localStorage.getItem('CurrentUser')).Name;
-            document.getElementById('second').innerText = localStorage.getItem('address');
-            document.getElementById('third').innerText = localStorage.getItem('email');
-            document.getElementById('fourth').innerText = localStorage.getItem('phone');
-
         };
     </script>
 

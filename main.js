@@ -21,51 +21,94 @@ function isEmpty(string) {
 }
 
 /**
- * Registers the use based on the four fields.
+ * Registers the user based on the four fields.
  * Validates that the fields are not empty and passwords match.
  * Method stores user data in local storage.
  */
 function registration() {
     users = JSON.parse(localStorage.getItem('Users')) || [];
     var mentorRadioButton = document.getElementById('mentor');
-    var menteeRadioButton = document.getElementById('mentee');    
+    var menteeRadioButton = document.getElementById('mentee');   
+
+    var userName = document.getElementById("name").value;
+    var userEmail = document.getElementById("email").value; 
+    var password = document.getElementById("psw").value;
+    var passRepeat = document.getElementById("psw-repeat").value;
+
     var userData;
     var userType;
 
+    if (checkRegistration()) {
+        userData = {
+            Name: userName,
+            Email: userEmail,
+            Password: password,
+            UserType :userType
+        };
+
+        users.push(userData);
+        setCurrentUser(userData);
+        localStorage.setItem('Users', JSON.stringify(users));
+
+        if (mentorRadioButton.checked) {
+            userType = "Mentor";
+        } else if (menteeRadioButton.checked) {
+            userType = "Mentee";
+        }
+
+        alert("Success! User account created.");
+        navigateToPage(userType);
+    }
+}
+
+/**
+ * Checks validity of registration fields. Returns false if fields are empty,
+ * email already exists, email does not follow correct guidelines, or passwords
+ * do not match.
+ * 
+ * @returns boolean depending on validity of registration
+ */
+function checkRegistration() {
+    var userName = document.getElementById("name").value;
+    var userEmail = document.getElementById("email").value; 
+    var password = document.getElementById("psw").value;
+    var passRepeat = document.getElementById("psw-repeat").value;
+
     if (
-        !isEmpty(document.getElementById("name").value) && 
-        !isEmpty(document.getElementById("email").value) &&
-        !isEmpty(document.getElementById("psw").value) &&
-        !isEmpty(document.getElementById("psw-repeat").value)) {
+        !isEmpty(userName) && 
+        !isEmpty(userEmail) &&
+        !isEmpty(password) &&
+        !isEmpty(passRepeat)) {
 
-        if (document.getElementById("psw").value == document.getElementById("psw-repeat").value) {
+        let emailRegex = new RegExp("^(.+)@(.+)$");
 
-            if (mentorRadioButton.checked) {
-                userType = "Mentor";
-            } else if (menteeRadioButton.checked) {
-                userType = "Mentee";
-            }
-    
-            userData = {Name: document.getElementById("name").value,
-                Email: document.getElementById("email").value,
-                Password: document.getElementById("psw").value,
-                UserType :userType};
-    
-            users.push(userData);
-            localStorage.setItem('Users', JSON.stringify(users));
+        users = JSON.parse(localStorage.getItem('Users'));
+        const userExists = this.users.find( (user) => {
+            return user.Email == userEmail;
+        });
 
-            alert("Success! User account created.");
-            window.location = './studentview.html';
+        // Registration validation
+        if (userExists != undefined) {
+            alert("Error: Account with this email already exists!");
+            return false;
+        }
+        else if (!emailRegex.test(userEmail)) {
+            alert("Incorrect email format! Please try again.");
+            return false;
+        }
+        else if (password != passRepeat) {
+            alert("Passwords do not match! Please try again.");
+            return false;
         }
         else {
-            alert("Passwords do not match! Please try again.");
+            return true;
         }
 
     }
     else {
         alert("Registration fields not complete.");
+        return false;
     }
-
 }
 
 /**
@@ -83,7 +126,7 @@ function checkLogin() {
         userType = user.UserType;
         curUser = user;
         return user.Email === emailInput && user.Password === passInput;
-        });
+    });
 
     if (fieldsMatch) {
         setCurrentUser(curUser);
@@ -97,6 +140,11 @@ function checkLogin() {
 function setCurrentUser(user) {
     localStorage.setItem("CurrentUser", JSON.stringify(user));
 }
+
+// function getCurrentUser() {
+//     let curUser = localStorage.getItem("CurrentUser");
+//     document.querySelector('#div_id_for_display').innerHTML = curUser.Name;
+// }
 
 /**
  * Retrieves user's password based on provided email.
