@@ -30,17 +30,18 @@ function registration() {
     var mentorRadioButton = document.getElementById('mentor');
     var menteeRadioButton = document.getElementById('mentee');   
 
-    var userName = document.getElementById("name").value;
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
     var userEmail = document.getElementById("email").value; 
     var password = document.getElementById("psw").value;
-    var passRepeat = document.getElementById("psw-repeat").value;
 
     var userData;
     var userType;
 
     if (checkRegistration()) {
         userData = {
-            Name: userName,
+            FirstName: firstName,
+            LastName: lastName,
             Email: userEmail,
             Password: password,
             UserType :userType
@@ -69,13 +70,15 @@ function registration() {
  * @returns boolean depending on validity of registration
  */
 function checkRegistration() {
-    var userName = document.getElementById("name").value;
+    var firstName = document.getElementById("firstName").value;
+    var lastName = document.getElementById("lastName").value;
     var userEmail = document.getElementById("email").value; 
     var password = document.getElementById("psw").value;
     var passRepeat = document.getElementById("psw-repeat").value;
 
     if (
-        !isEmpty(userName) && 
+        !isEmpty(firstName) && 
+        !isEmpty(lastName) &&
         !isEmpty(userEmail) &&
         !isEmpty(password) &&
         !isEmpty(passRepeat)) {
@@ -109,6 +112,13 @@ function checkRegistration() {
         alert("Registration fields not complete.");
         return false;
     }
+}
+
+function checkName() {
+    let name = document.getElementById("name").value;
+
+    let nameRegex = new RegExp("^(.+)@(.+)$");
+
 }
 
 /**

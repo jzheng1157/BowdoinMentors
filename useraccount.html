@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>Student Account</title>
 
-    <!-- <link rel="icon" type="image/png" href="iconmonstr-tree-18-240.png"> -->
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
 
     <link rel="stylesheet" href="app.css">
@@ -48,14 +47,14 @@
                 <!-- Input boxes -->
                 <div class="grid" style="margin: 0 50px;">
     
-                    <label for="firstname">
+                    <label for="firstName">
                     First name
-                    <input type="text" id="usersName" name="firstname" placeholder="First name" required>
+                    <input type="text" id="firstName" name="firstName" placeholder="First name" required>
                     </label>
                 
-                    <label for="lastname">
+                    <label for="lastName">
                     Last name
-                    <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
                     </label>
                 
                 </div>
@@ -64,7 +63,7 @@
                 
                     <label for="email">
                     Email
-                    <input type="text" id="email" name="email" placeholder="Email" required>
+                    <input type="text" id="email" name="email" placeholder="Email" required >
                     </label>
                 
                     <label for="phone">
@@ -120,7 +119,12 @@
                     </label>
                 
                 </div>
-                
+
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="10" value="0" class="slider" id="myRange">
+                    <p>Number of mentors I want: <b><span id="demo"></span></b></p>
+                </div>
+
                 <div >
                     <!-- Submit Button -->
                     <button type="submit">Submit</button>
@@ -136,8 +140,26 @@
 
     <script>
         window.onload = function() {
-            document.getElementById('usersName').innerText = JSON.parse(localStorage.getItem('CurrentUser')).Name;
+            var userName = document.getElementById('usersName');
+            var firstName = document.getElementById('firstName');
+            var lastName = document.getElementById('lastName');
+            var userEmail = document.getElementById("email");
+            userName.innerText = JSON.parse(localStorage.getItem('CurrentUser')).FirstName + " " + JSON.parse(localStorage.getItem('CurrentUser')).LastName;
+            firstName.value = JSON.parse(localStorage.getItem('CurrentUser')).FirstName;
+            lastName.value = JSON.parse(localStorage.getItem('CurrentUser')).LastName;
+            userEmail.value = JSON.parse(localStorage.getItem('CurrentUser')).Email;
+
         };
+
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+        }
+
     </script>
 
 </body>
