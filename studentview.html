@@ -10,6 +10,19 @@
     <link rel="stylesheet" href="app.css">
 
     <style>
+
+      @font-face {
+        font-family: "Mrs Eaves B";
+        src: url("./mrs-eaves/MRSEAV~1.TTF");
+           
+      }
+
+      @font-face {
+        font-family: "Mrs Eaves";
+        src: url("./mrs-eaves/MRSEA~9.TTF");
+           
+      }
+
       .switch {
         display: inline-block;
         height: 34px;
@@ -58,27 +71,45 @@
       .slider.round:before {
         border-radius: 50%;
       }
+
+      h4 {
+        font-family: "Mrs Eaves";
+        color: black;
+      }
+
+      .nav-bar {
+    position: relative;
+    background-color: #333; /* Any color you prefer for the nav bar */
+    height: 90px; /* Any height you want */
+    /* Add a white line at the bottom */
+    border-bottom: 3px solid white;
+}
+      
     </style>
 </head>
 
-<body> 
-    <nav style="background-color: #141e26; font-size: 1000px">
-        <ul style="margin-left: 7px;">
-            <li style=" font-size: 40px; color: white;">
+<body data-theme="light" style="font-family: Mrs Eaves;"> 
+
+    <nav class ="nav-bar" style="background-color: #000000; position: sticky; top: 0;">
+        <ul>
+            <li style="font-size: 70px; color: white; font-family: 'Mrs Eaves B'; margin-left: 20px; margin-top: 20px;">
                 Bowdoin Mentors
             </li>
         </ul>
-        <ul style="margin-right: 7px;">
-            <li><a href="./studentview.html">See Mentors </a></li>
-            <li><a href="./contactus.html">Contact Us</a></li>
-            <li><a href="./useraccount.html">Account</a></li>
-            <li><a href="./signin.html">Sign Out</a></li>
+        <ul >
+
+            <li><a style="color:white" href="./studentview.html">See Mentors </a></li>
+            <li><a style="color:white" href="./contactus.html">Contact Us</a></li>
+            <li><a style="color:white" href="./useraccount.html">Account</a></li>
+            <li><a style="color:white; margin-right: 30px;" href="./signin.html">Sign Out</a></li>
         </ul>
+        
     </nav>
+
 <div class="container">
     
-    <main class="container">
-        <article >
+    <main class="container" style="color: black;">
+        <article style="border: 3px solid  #1D5C57;">
             <h4>Amber Barksdale (Class Year: 2018)</h4> 
             <div class="grid">
               <div><p><b>Major:</b> Music, Neuroscience</p4></div>
@@ -92,7 +123,7 @@
             </div>
             <br>
             <details>
-                <summary role="button">Contact Amber</summary>
+                <summary role="button" style="background-color: #1D5C57">Contact Amber</summary>
                 <p4><b>Available for Mentoring:</b> Yes</p4>
                 <br><br>
                 <p4><b>Method:</b></p4>
@@ -119,7 +150,7 @@
             
         </article>
 
-        <article >
+        <article style="border: 3px solid  #00506A;">
           <h4>Anna Bradley-Webb (Class Year: 2016)</h4> 
           <div class="grid">
             <div><p><b>Major:</b> English</p4></div>
@@ -133,7 +164,7 @@
           </div>
           <br>
           <details>
-              <summary role="button">Contact Anna</summary>
+              <summary role="button" style="background-color: #00506A">Contact Anna</summary>
               <p4><b>Available for Mentoring:</b> Yes</p4>
               <br><br>
               <p4><b>Method:</b></p4>
@@ -160,7 +191,7 @@
           
         </article>
 
-        <article >
+        <article style="border: 3px solid  #730051">
           <h4>Ben Ziomek (Class Year: 2013)</h4> 
           <div class="grid">
             <div><p><b>Major:</b> Economics, German</p4></div>
@@ -174,7 +205,7 @@
           </div>
           <br>
           <details>
-              <summary role="button">Contact Ben</summary>
+              <summary role="button" style="background-color: #730051">Contact Ben</summary>
               <p4><b>Available for Mentoring:</b> Yes</p4>
               <br><br>
               <p4><b>Method:</b></p4>
@@ -201,7 +232,7 @@
           
         </article>
 
-        <article >
+        <article style="border: 3px solid  #687C2F;"">
           <h4>Ezra Sunshine (Class Year: 2019)</h4>
           <div class="grid">
             <div><p><b>Major:</b> Computer Science, Economics</p4></div>
@@ -215,7 +246,7 @@
           </div>
           <br> 
           <details>
-              <summary role="button">Contact Ezra</summary>
+              <summary role="button" style="background-color: #687C2F">Contact Ezra</summary>
               <p4><b>Available for Mentoring:</b> Yes</p4>
               <br><br>
               <p4><b>Method:</b></p4>
@@ -242,7 +273,7 @@
           
         </article>
 
-        <article >
+        <article style="border: 3px solid  #9B2822">
           <h4>Gary Furash (Class Year: 1990)</h4>
           <div class="grid">
             <div><p><b>Major:</b> Philosophy, Psychology</p4></div>
@@ -256,7 +287,7 @@
           </div>
           <br>  
           <details>
-              <summary role="button">Contact Gary</summary>
+              <summary role="button" style="background-color:#9B2822">Contact Gary</summary>
               <p4><b>Available for Mentoring:</b> Yes</p4>
               <br><br>
               <p4><b>Method:</b></p4>
@@ -283,7 +314,7 @@
           
         </article>
 
-        <article >
+        <article style="border: 3px solid  #00506A;">
           <h4>Jun Choi (Class Year: 2015)</h4> 
           <div class="grid">
             <div><p><b>Major:</b> Government and Legal Studies</p4></div>
@@ -483,6 +514,10 @@
           </details>
           
         </article>
+
+        <br>
+        <br>
+
 
     </main>
 
