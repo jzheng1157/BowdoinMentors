@@ -6,7 +6,6 @@
     <title>Student Account</title>
 
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
-
     <link rel="stylesheet" href="app.css">
 
     <style>
@@ -43,21 +42,54 @@
         background: #1095c1;
         cursor: pointer;
         }
+
+        input {
+            background-color: white;
+        }
+
+        .grid {
+            margin: 0 50px; 
+            color: #1d3b47fc;
+        }
+
+        article {
+            background-color: rgb(246, 246, 246);
+        }
+
+        input {
+            color: #1d3b47fc;
+        }
+
+        
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #d6e2ea;
+            opacity: 1; /* Firefox */
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #d6e2ea;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #d6e2ea;
+        }
+
     </style>
 </head>
 
 <body style="background-color: #1d3b47be;" onload="getCurrentUser()"> 
-    <nav style="background-color: #141e26; font-size: 1000px">
-        <ul style="margin-left: 7px;">
-            <li style=" font-size: 40px; color: white;">
+    <!-- <nav style="background-color: #141e26; font-size: 1000px"> -->
+    <nav class="nav-bar" style="background-color: #000000; position: sticky; top: 0;">
+        <ul>
+            <li style="font-size: 70px; color: white; font-family: 'Mrs Eaves B'; margin-left: 20px; margin-top: 0px;">
                 Bowdoin Mentors
             </li>
         </ul>
-        <ul style="margin-right: 7px;">
-            <li><a href="./studentview.html" role="button">See Mentors </a></li>
-            <li><a href="./contactus.html" role="button">Contact Us</a></li>
-            <li><a href="./useraccount.html" role="button">Account</a></li>
-            <li><a href="./signin.html" role="button">Sign Out</a></li>
+        <ul>
+            <li><a style="color:white;" href="./studentview.html">See Mentors </a></li>
+            <li><a style="color:white" href="./contactus.html">Contact Us</a></li>
+            <li><a style="color:white" href="./useraccount.html">Account</a></li>
+            <li><a style="color:white; margin-right: 30px;" href="./signin.html">Sign Out</a></li>
         </ul>
     </nav>
 
@@ -67,20 +99,20 @@
             <article>
                 <div class="grid">
                     <div>
-                        <h1 id="usersName"></h1> 
+                        <h1 id="usersName" style="color: #1d3b47fc;"></h1> 
                     </div>
-                    <div style="margin-top: 13.5px;">
-                        <h4 style="color: rgb(226, 226, 226);">Class Year: 2024</h4>
+                    <div style="margin-top: 13.5px; color: #1d3b47fc;">
+                        <h4>Class Year: 2024</h4>
                     </div>
-                    <div style="margin-top: 13.5px;">
-                        <h4 style="color: rgb(226, 226, 226);">Major: Computer Science</h4>
+                    <div style="margin-top: 13.5px; color: #1d3b47fc;">
+                        <h4>Major: Computer Science</h4>
                     </div>      
             
                 
                 </div>
                 
                 <!-- Input boxes -->
-                <div class="grid" style="margin: 0 50px;">
+                <div class="grid"">
     
                     <label for="firstName">
                     First name
@@ -157,7 +189,7 @@
 
                 <div class="slidecontainer">
                     <input type="range" min="0" max="10" value="0" class="slider" id="myRange">
-                    <p>Number of mentors I want: <b><span id="demo"></span></b></p>
+                    <p style="color: #1d3b47fc;">Number of mentors I want: <b><span id="demo"></span></b></p>
                 </div>
 
                 <div >
