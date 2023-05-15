@@ -24,3 +24,23 @@ html {
 
 }  
 
+@font-face {
+    font-family: "Mrs Eaves B";
+    src: url("./mrs-eaves/MRSEAV~1.TTF");
+       
+  }
+
+  @font-face {
+    font-family: "Mrs Eaves";
+    src: url("./mrs-eaves/MRSEA~9.TTF");
+       
+  }
+
+  h4 {
+    font-family: "Mrs Eaves";
+    color: black;
+  }
+
+  h1 {
+    font-family: "Mrs Eaves";
+  }
