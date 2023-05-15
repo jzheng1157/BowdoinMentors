@@ -65,6 +65,30 @@
         font-family: "Mrs Eaves";
         color: black;
       }
+
+      .nav-bar {
+    
+        background-color: #333; /* Any color you prefer for the nav bar */
+        height: 90px; /* Any height you want */
+        /* Add a white line at the bottom */
+        border-bottom: 3px solid white;
+        width: 100%;
+
+
+      }
+
+      .nav-bar a {
+        color: white;
+      }
+
+      .nav-bar a:hover {
+          color: #73811a;
+      }
+
+      .cards {
+        background-color:rgb(243, 243, 243);
+        padding-bottom: 1px;
+      }
       
     </style>
 </head>
@@ -78,19 +102,18 @@
             </li>
         </ul>
         <ul >
-
-            <li><a style="color:white;" href="./studentview.html">See Mentors </a></li>
-            <li><a style="color:white" href="./contactus.html">Contact Us</a></li>
-            <li><a style="color:white" href="./useraccount.html">Account</a></li>
-            <li><a style="color:white; margin-right: 30px;" href="./signin.html">Sign Out</a></li>
+            <li><a style="border-right: 1px solid #ffffff; border-radius: 0%;" href="./studentview.html">See Mentors </a></li>
+            <li><a style="border-right: 1px solid #ffffff; border-radius: 0%;" href="./contactus.html">Contact Us</a></li>
+            <li><a style="border-right: 1px solid #ffffff; border-radius: 0%;" href="./useraccount.html">Account</a></li>
+            <li><a style="margin-right: 30px;" href="./signin.html">Sign Out</a></li>
         </ul>
         
     </nav>
 
-<div class="container">
+<div class="container" >
     
     <main class="container" style="color: black;">
-        <article style="border: 3px solid  #1D5C57;">
+        <article style="border: 3px solid  #1D5C57;" class="cards">
             <h4>Amber Barksdale (Class Year: 2018)</h4> 
             <div class="grid">
               <div><p4><b>Major:</b> Music, Neuroscience</p4></div>
@@ -99,16 +122,17 @@
             </div>
             <br>
             <div class="grid">
-              <div><p4><b>Most Recent Employment:</b> Snap Inc</p4></div>
-              <div><p4><b>Most Recent Position:</b> Software Engineer</p4></div>
-              <div><p4><b>Activities:</b> A Capella (BOCA), Chamber Choir</p4></div>
+              <div><p4><b>Employment:</b> Snap Inc</p4></div>
+              <div><p4><b>Position:</b> Software Engineer</p4></div>
+              <div><p4><b>Activities:</b> A Capella (BOCA), Choir</p4></div>
             </div>
             <br>
+          
             <details>
-                <summary role="button" style="background-color: #1D5C57">Contact Amber</summary>
-                <p4><b>Available for Mentoring:</b> Yes</p4>
-                <br><br>
-                <p4><b>Method:</b></p4>
+                <summary role="button" >Contact Amber</summary>
+                <p4><b>Contact Notes:</b></p4>
+                <br>
+                <p4>Willing to conduct mock behavioral and technical interviews</p4>
                 <br>
                 <p4>Email: barksdaleaz@gmail.com</p4>
                 <br>
@@ -116,11 +140,8 @@
                 <br>
                 <p4>LinkedIn: https://www.linkedin.com/in./amber-zetelmo-barksdale/</p4>
                 <br>
-                <p4><b>Contact Notes:</b></p4>
-                <br>
-                <p4>Willing to conduct mock behavioral and technical interviews</p4>
-                <br>
-                <br>
+                
+            
                 <div class="container">
                   <b>I Plan to Reach Out</b>
                   <label class="switch">
@@ -132,7 +153,7 @@
             
         </article>
 
-        <article style="border: 3px solid  #00506A;">
+        <article style="border: 3px solid  #00506A; " class="cards">
           <h4>Anna Bradley-Webb (Class Year: 2016)</h4> 
           <div class="grid">
             <div><p4><b>Major:</b> English</p4></div>
@@ -147,7 +168,7 @@
           </div>
           <br>
           <details>
-              <summary role="button" style="background-color: #00506A">Contact Anna</summary>
+              <summary role="button" >Contact Anna</summary>
               <p4><b>Available for Mentoring:</b> Yes</p4>
               <br><br>
               <p4><b>Method:</b></p4>
@@ -163,18 +184,18 @@
               <p4>Willing to conduct mock technical interviews</p4>
               <br>
               <br>
-              <div class="container">
+              <div class="container" >
                 <b>I Plan to Reach Out</b>
-                <label class="switch">
-                  <input type="checkbox" />
-                  <div class="slider round"></div>
+                <label  class="switch">
+                  <input style=" color: yellow"type="checkbox" />
+                  <div style=" color: yellow"class="slider round"></div>
                 </label>
               </div>
           </details>
           
         </article>
 
-        <article style="border: 3px solid  #730051">
+        <article style="border: 3px solid  #730051;" class="cards">
           <h4>Ben Ziomek (Class Year: 2013)</h4> 
           <div class="grid">
             <div><p4><b>Major:</b> Economics, German</p4></div>
@@ -189,7 +210,7 @@
           </div>
           <br>
           <details>
-              <summary role="button" style="background-color: #730051">Contact Ben</summary>
+              <summary role="button" >Contact Ben</summary>
               <p4><b>Available for Mentoring:</b> Yes</p4>
               <br><br>
               <p4><b>Method:</b></p4>
@@ -231,7 +252,7 @@
           </div>
           <br> 
           <details>
-              <summary role="button" style="background-color: #687C2F">Contact Ezra</summary>
+              <summary role="button" >Contact Ezra</summary>
               <p4><b>Available for Mentoring:</b> Yes</p4>
               <br><br>
               <p4><b>Method:</b></p4>
