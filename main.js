@@ -82,7 +82,7 @@ function checkRegistration() {
 
         let emailRegex = new RegExp("^(.+)@(.+)$");
 
-        users = JSON.parse(localStorage.getItem('Users'));
+        users = JSON.parse(localStorage.getItem('Users')) || [];
         const userExists = this.users.find( (user) => {
             return user.Email == userEmail;
         });
