@@ -1,6 +1,10 @@
 
 var users = JSON.parse(localStorage.getItem('Users')) || [];
 
+function alertworked() {
+    alert("Success!")
+}
+
 function mentorClick() {
     alert("Your mentor has been notified!");
 }

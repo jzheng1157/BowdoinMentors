@@ -5,6 +5,8 @@
     <title>Contact Us - Bowdoin Mentors</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
     <link rel="stylesheet" href="app.css">
+    <script src="main.js"></script>
+
 
     <style>
         article {
@@ -19,11 +21,17 @@
         textarea {
           background-color: white;
         }
+
+        .fix {
+          color:black;
+          font-family: Mrs Eaves;
+
+        }
     </style>
 
   </head>
 
-  <body style="background-color: #1d3b47be; ">
+  <body style="background-color: #1d3b47be; color:black ">
     <nav class="nav-bar">
       <ul>
           <li style="font-size: 70px; color: white; font-family: 'Mrs Eaves B'; margin-left: 20px; margin-top: 0px;">
@@ -40,28 +48,31 @@
 
     <div class="container">
       <main class="container">
-        <article>
+        <article >
           <p style="color: black; font-family: 'Mrs Eaves'; margin: 0 50px;">Welcome to Bowdoin Mentors, connecting current students at Bowdoin College to alumni. If you have any questions or comments, please use the form below to contact us.</p>
           <br>
           <form action="#" style="margin: 0 50px;">
             <div class="field">
-              <label for="name">Name:</label>
+              <label class="fix"for="name">Name:</label>
               <input type="text" id="name" name="name">
             </div>
             <div class="field">
-              <label for="email">Email:</label>
+              <label class="fix"for="email">Email:</label>
               <input type="email" id="email" name="email">
             </div>
             <div class="field">
-              <label for="message">Message:</label>
+              <label class="fix"for="message">Message:</label>
               <textarea id="message" name="message"></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button style="font-family: Mrs Eaves" type="button" onclick="alertwork()">Submit</button>
           </form>
           <div class="container" style="text-align: center;">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2874.4965471667506!2d-69.9665720239643!3d43.907692871091236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cad873e343ba803%3A0xa9b08c7cc377609!2sBowdoin%20College!5e0!3m2!1sen!2sus!4v1682958900189!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
           </div>
         </article>
+
+        <br>
+        
     
         
       </main>

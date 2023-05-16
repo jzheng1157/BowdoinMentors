@@ -9,53 +9,37 @@
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
 
     <link rel="stylesheet" href="app.css">
+    <script src="main.js"></script>
+
 
 </head>
 
 <body style="background-color: #1d3b47be;"> 
-    <nav style="background-color: #141e26; font-size: 1000px">
-        <ul style="margin-left: 7px;">
-            <li style=" font-size: 40px; color: white;">
+    <nav class ="nav-bar" style="background-color: #000000; position: sticky; top: 0;">
+        <ul>
+            <li style="font-size: 70px; color: white; font-family: 'Mrs Eaves B'; margin-left: 20px; margin-top: 0px; letter-spacing: -px;">
                 Bowdoin Mentors
             </li>
         </ul>
-        <ul style="margin-right: 7px;">
-            <li><a href="./about.html" role="button">About</a></li>
-            <li><a href="./contactus.html" role="button">Contact Us</a></li>
-            <li><a href="./signin.html" role="button">Sign Out</a></li>
+        <ul >
+            <li><a style="border-right: 1px solid #ffffff; border-radius: 0%;" href="./studentview.html">See Mentors </a></li>
+            <li><a style="border-right: 1px solid #ffffff; border-radius: 0%;" href="./contactus.html">Contact Us</a></li>
+            <li><a style="border-right: 1px solid #ffffff; border-radius: 0%;" href="./useraccount.html">Account</a></li>
+            <li><a style="margin-right: 30px;" href="./signin.html">Sign Out</a></li>
         </ul>
+        
     </nav>
 
-    <div class="container">
-        
-        <main class="container">
-            <article>
+        <div class="container" >
+            <article data-theme="light" >
                 <div class="grid">
                     <div>
-                        <h1 >Alan Casey</h1> 
+                        <h1 id="username" style="color: #000000;"></h1> 
                     </div>
-                    <div >
-                        <h4>Location: Buck Athletic Center</h4>
-                    </div>
-                    <div>
-                        <h4 >Company: Chess.com</h4>
-                    </div>      
-            
-                
+                   
                 </div>
                 
                 <br>
-                <details>
-                    <summary role="button">Contact Alan</summary>
-                    <h1>Method:</h1>
-                    <h6>Email: acasey@bowdoin.edu</h5>
-                    <h6>Phone: 704-789-3364</h5>
-                    <h6>Github: alan.casey</h6>
-                    <h1>Notes:</h1>
-                    <h6>I would perfer to be emailed and am willing to conduct mock interviews.</h6>
-
-                </details>
-                <p><b>Activities:</b> Squash, Soccer, Chess, Climbing</p>
                 
                 
                 <!-- Input boxes -->
@@ -108,10 +92,7 @@
                     <input type="text" id="major" name="major" placeholder="Major" required>
                     </label>
                 
-                    <label for="gradyear">
-                    Year of Graduation
-                    <input type="text" id="gradyear" name="gradyear" placeholder="Year of Graduation" required>
-                    </label>
+                    
             
                     <label for="career">
                     Career/Industry
@@ -124,21 +105,32 @@
                     </label>
                 
                 </div>
+                <button type="button" onclick="alertworked()">Submit</button>
 
             </article>
 
-        </main>
-
-    </div>
+        </div>
 
     
 
-    <div >
-        <!-- Submit Button -->
-        <button type="submit">Submit</button>
 
-    </div>
+    
+<br>
 
+<script>
+    window.onload = function() {
+            var userName = document.getElementById('usersName');
+            var firstName = document.getElementById('firstName');
+            var lastName = document.getElementById('lastName');
+            var userEmail = document.getElementById("email");
+            userName.innerText = JSON.parse(localStorage.getItem('CurrentUser')).FirstName + " " + JSON.parse(localStorage.getItem('CurrentUser')).LastName;
+            firstName.value = JSON.parse(localStorage.getItem('CurrentUser')).FirstName;
+            lastName.value = JSON.parse(localStorage.getItem('CurrentUser')).LastName;
+            userEmail.value = JSON.parse(localStorage.getItem('CurrentUser')).Email;
+
+        };
+</script>
 </body>
+
 
 </html>

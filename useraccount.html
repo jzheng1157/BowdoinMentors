@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
     <link rel="stylesheet" href="app.css">
+    <script src="main.js"></script>
+
 
     <style>
         .slidercontainer {
@@ -60,6 +62,11 @@
             color: #1d3b47fc;
         }
 
+        label {
+            color:black;
+            font-family: Mrs Eaves;
+        }
+
         
         ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
             color: #d6e2ea;
@@ -92,18 +99,16 @@
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container" >
         
-        <main class="container">
-            <article>
+        <main class="container" >
+            <article class="cards">
                 <div class="grid">
                     <div>
-                        <h1 id="usersName" style="color: #1d3b47fc;"></h1> 
+                        <h1 id="usersName" style="color: black;"></h1> 
                     </div>
-                    <div style="margin-top: 13.5px; color: #1d3b47fc;">
-                        <h4>Class Year: 2024</h4>
-                    </div>
-                    <div style="margin-top: 13.5px; color: #1d3b47fc;">
+                    
+                    <div style="margin-top: 13.5px; color: black;">
                         <h4>Major: Computer Science</h4>
                     </div>      
                 </div>
@@ -191,11 +196,12 @@
 
                 <div >
                     <!-- Submit Button -->
-                    <button type="submit">Submit</button>
+                    <button type="button" onclick="alertworked()">Submit</button>
             
                 </div>
             </article>
 
+            <br>
         </main>
 
     </div>

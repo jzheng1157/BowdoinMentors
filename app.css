@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Mrs Eaves B";
-    src: url("./mrs-eaves/MRSEAV~1.TTF");
+    src: url("./mrs-eaves/bowdoin-font.ttf");
        
   }
 
@@ -37,7 +37,7 @@
   }
 
   .nav-bar a:hover {
-      color: #73811a;
+      color: #bcca49;
   }
 
   #header-content {
@@ -63,3 +63,4 @@
       background-attachment: fixed;
 
   }  
+  
