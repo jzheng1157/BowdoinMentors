@@ -21,12 +21,14 @@
 
   .nav-bar {
     
-    background-color: #333; /* Any color you prefer for the nav bar */
+    background-color: #000000; /* Any color you prefer for the nav bar */
     height: 90px; /* Any height you want */
     /* Add a white line at the bottom */
     border-bottom: 3px solid white;
     width: 100%;
-
+    font-family: Mrs Eaves;
+    position: sticky; 
+    top: 0;
 
   }
 
