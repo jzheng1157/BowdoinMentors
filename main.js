@@ -43,6 +43,13 @@ function registration() {
     var userType;
 
     if (checkRegistration()) {
+        
+        if (mentorRadioButton.checked) {
+            userType = "Mentor";
+        } else if (menteeRadioButton.checked) {
+            userType = "Mentee";
+        }
+
         userData = {
             FirstName: firstName,
             LastName: lastName,
@@ -54,12 +61,6 @@ function registration() {
         users.push(userData);
         setCurrentUser(userData);
         localStorage.setItem('Users', JSON.stringify(users));
-
-        if (mentorRadioButton.checked) {
-            userType = "Mentor";
-        } else if (menteeRadioButton.checked) {
-            userType = "Mentee";
-        }
 
         alert("Success! User account created.");
         navigateToPage(userType);
@@ -118,13 +119,6 @@ function checkRegistration() {
     }
 }
 
-function checkName() {
-    let name = document.getElementById("name").value;
-
-    let nameRegex = new RegExp("^(.+)@(.+)$");
-
-}
-
 /**
  * Checks the validity of user's login email and password
  */
@@ -146,7 +140,7 @@ function checkLogin() {
         setCurrentUser(curUser);
         navigateToPage(userType);
     }
-    else {
+    else if (fieldsMatch == null) {
         alert("Incorrect email or password.");
     }
 }
@@ -154,11 +148,6 @@ function checkLogin() {
 function setCurrentUser(user) {
     localStorage.setItem("CurrentUser", JSON.stringify(user));
 }
-
-// function getCurrentUser() {
-//     let curUser = localStorage.getItem("CurrentUser");
-//     document.querySelector('#div_id_for_display').innerHTML = curUser.Name;
-// }
 
 /**
  * Retrieves user's password based on provided email.
