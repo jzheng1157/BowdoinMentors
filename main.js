@@ -9,10 +9,6 @@ function mentorClick() {
     alert("Your mentor has been notified!");
 }
 
-function displayReachedOut() {
-    alert("Your mentor has been pooped!")
-}
-
 function navigateToPage(userType) {
     switch (userType) {
         case "Mentor":
