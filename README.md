@@ -1,4 +1,6 @@
 # Bowdoin Mentors
+## GitHub
+https://github.com/williamwarlick/BowdoinMentors
 
 ## Setup
 
