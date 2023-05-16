@@ -43,7 +43,7 @@ function registration() {
     var userType;
 
     if (checkRegistration()) {
-        
+
         if (mentorRadioButton.checked) {
             userType = "Mentor";
         } else if (menteeRadioButton.checked) {
@@ -123,7 +123,7 @@ function checkRegistration() {
  * Checks the validity of user's login email and password
  */
 function checkLogin() {
-    users = JSON.parse(localStorage.getItem('Users'));
+    users = JSON.parse(localStorage.getItem('Users')) || [];
 
     let emailInput = document.getElementById("login").value;
     let passInput = document.getElementById("password").value;
