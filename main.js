@@ -12,7 +12,7 @@ function mentorClick() {
 function navigateToPage(userType) {
     switch (userType) {
         case "Mentor":
-            window.location.href = './newmentorview.html';
+            window.location.href = './mentorview.html';
             break;
         case "Mentee":
             window.location.href = './studentview.html';

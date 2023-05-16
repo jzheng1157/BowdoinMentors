@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mentor View</title>
+
+    <!-- <link rel="icon" type="image/png" href="iconmonstr-tree-18-240.png"> -->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+
+    <link rel="stylesheet" href="app.css">
+    <script src="main.js"></script>
+
+    <style>
+         article {
+            background-color: rgb(246, 246, 246);
+        }
+
+        input {
+            color: #1d3b47fc;
+            background-color: white;
+        }
+
+        label {
+            color:black;
+            font-family: Mrs Eaves;
+        }
+
+        .grid {
+            margin: 0 50px; 
+            color: #1d3b47fc;
+        }
+        
+        ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #d6e2ea;
+            opacity: 1; /* Firefox */
+        }
+
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: #d6e2ea;
+        }
+
+        ::-ms-input-placeholder { /* Microsoft Edge */
+            color: #d6e2ea;
+        }
+
+        .slidercontainer {
+            width: 100%;
+        }
+
+        .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 15px;
+        border-radius: 5px;   
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        }
+
+        .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%; 
+        background: #1095c1;
+        cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #1095c1;
+        cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: #1d3b47be;"> 
+    <nav class ="nav-bar" style="background-color: #000000; position: sticky; top: 0;">
+        <ul>
+            <li style="font-size: 70px; color: white; font-family: 'Mrs Eaves B'; margin-left: 20px; margin-top: 0px; letter-spacing: -px;">
+                Bowdoin Mentors
+            </li>
+        </ul>
+        <ul >
+            <li><a style="border-right: 1px solid #ffffff; border-radius: 0%;" href="./contactus mentor.html">Contact Us</a></li>
+            <li><a style="border-right: 1px solid #ffffff; border-radius: 0%;" href="./mentorview.html">Account</a></li>
+            <li><a style="margin-right: 30px;" href="./signin.html">Sign Out</a></li>
+        </ul>
+        
+    </nav>
+
+        <div class="container" >
+            <article data-theme="light" >
+                <div class="grid">
+                    <div>
+                        <h1 id="usersName" style="color: #000000;"></h1> 
+                    </div>
+                   
+                </div>                
+                
+                <!-- Input boxes -->
+                <div class="grid">
+    
+                    <label for="firstName">
+                    First name
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    </label>
+                
+                    <label for="lastName">
+                    Last name
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </label>
+                
+                </div>
+            
+                <div class="grid">
+                
+                    <label for="email">
+                    Email
+                    <input type="text" id="email" name="email" placeholder="Email" required>
+                    </label>
+                
+                    <label for="phone">
+                    Phone Number
+                    <input type="text" id="phone" name="phone" placeholder="Phone Number (optional)" required>
+                    </label>
+            
+                    <label for="LinkedIn">
+                    LinkedIn
+                    <input type="text" id="LinkedIn" name="LinkedIn" placeholder="LinkedIn (optional)" required>
+                    </label>
+                
+                </div>
+
+                <div class="grid">
+                
+                    <label for="major">
+                    Major
+                    <input type="text" id="major" name="major" placeholder="Major" required>
+                    </label>
+
+                    <label for="gradyear">
+                    Year of Graduation
+                    <input type="text" id="gradyear" name="gradyear" placeholder="Year of Graduation" required>
+                    </label>
+
+                    <label for="career">
+                    Career/Industry
+                    <input type="text" id="career" name="career" placeholder="Career/Industry" required>
+                    </label>
+            
+                    <label for="location">
+                    Location
+                    <input type="text" id="location" name="location" placeholder="Location (optional)" required>
+                    </label>
+                
+                </div>
+            
+                <div class="grid">
+
+                    <label for="activities">
+                        Activities
+                        <input type="text" id="activities" name="activities" placeholder="List your activities here" required>
+                        </label>
+
+                </div>
+
+                <div class="grid">
+                
+                    <label for="notes">
+                    Contact Notes
+                    <input type="text" id="notes" name="notes" placeholder="Write contact notes here" required>
+                    </label>
+                
+                </div>
+
+                <div class="slidecontainer">
+                    <input type="range" min="0" max="10" value="0" class="slider" id="myRange">
+                    <p style="color: #1d3b47fc;">Number of mentees I am willing to have: <b><span id="demo"></span></b></p>
+                </div>
+            
+                <button type="button" onclick="alertworked()">Submit</button>
+
+            </article>
+
+        </div>
+
+    
+
+
+    
+<br>
+
+<script>
+    window.onload = function() {
+        var userName = document.getElementById('usersName');
+        var firstName = document.getElementById('firstName');
+        var lastName = document.getElementById('lastName');
+        var userEmail = document.getElementById("email");
+        userName.innerText = JSON.parse(localStorage.getItem('CurrentUser')).FirstName + " " + 
+            JSON.parse(localStorage.getItem('CurrentUser')).LastName;
+        firstName.value = JSON.parse(localStorage.getItem('CurrentUser')).FirstName;
+        lastName.value = JSON.parse(localStorage.getItem('CurrentUser')).LastName;
+        userEmail.value = JSON.parse(localStorage.getItem('CurrentUser')).Email;
+    };
+
+
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+</script>
+</body>
+
+
+</html>
