@@ -1,13 +1,13 @@
-# Bowdoin Mentors
-## GitHub
+# **Bowdoin Mentors**
+## **GitHub**
 https://github.com/williamwarlick/BowdoinMentors
 
-## Setup
+## **Setup**
 
 Setting up Bowdoin Mentors is very simple. Just drag and drop the BowdoinMentors code folder anywhere on your computer.
 Make sure you have python3 installed on your system.
 
-## Configuring and running the website
+## **Configuring and running the website**
 
 1. Depending on your machine's operating system, open up Terminal or Command Prompt.
 2. Navigate to BowdoinMentors source code folder, ie. ```cd git/BowdoinMentors/```. If you are unsure if you are in the correct directory, type ```ls``` in the console and make sure index.html exists within the folder.
@@ -15,7 +15,7 @@ Make sure you have python3 installed on your system.
 4. Open up a browser of your choice (the website was tested on both Chrome and Safari) and navigate to 'localhost:8000'
 5. Check that you have successfully opened up the Bowdoin Mentors sign in page.
 
-## Using the website
+## **Using the website**
 
 To begin using Bowdoin Mentors, a user must create an account through the Registration button. The user can choose whether they want to sign up as a mentee or a mentor, and depending on that choice, they will be directed to different pages. *Note: this prototype saves user account information in localStorage so make sure to use the same browser throughout sessions.
 
